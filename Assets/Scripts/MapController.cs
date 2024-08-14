@@ -12,6 +12,14 @@ public class MapController : MonoBehaviour
     public GameObject currentChunk;
     PlayerMovement pm;
 
+    [Header("Optimization")]
+    public List<GameObject> spawnedChunks;
+    GameObject latestChunk;
+    public float maxOpDist; //Must be greater than the length and width of the tilemap
+    float opDist;
+    float optimizerCooldown;
+    public float optimizerCooldownDur;
+
     void Start()
     {
         pm = FindObjectOfType<PlayerMovement>();
@@ -20,7 +28,7 @@ public class MapController : MonoBehaviour
     void Update()
     {
         ChunkChecker();
-
+        ChunkOptimzer();
     }
 
     void ChunkChecker()
@@ -64,33 +72,33 @@ public class MapController : MonoBehaviour
         }
         else if (pm.moveDir.x > 0 && pm.moveDir.y > 0)
         {
-            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("RightUp").position, checkerRadius, terrainMask))
+            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Right Up").position, checkerRadius, terrainMask))
             {
-                noTerrainPosition = currentChunk.transform.Find("RightUp").position;   //Right up
+                noTerrainPosition = currentChunk.transform.Find("Right Up").position;   //Right up
                 SpawnChunk();
             }
         }
         else if (pm.moveDir.x > 0 && pm.moveDir.y < 0)
         {
-            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("RightDown").position, checkerRadius, terrainMask))
+            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Right Down").position, checkerRadius, terrainMask))
             {
-                noTerrainPosition = currentChunk.transform.Find("RightDown").position;  //Right down
+                noTerrainPosition = currentChunk.transform.Find("Right Down").position;  //Right down
                 SpawnChunk();
             }
         }
         else if (pm.moveDir.x < 0 && pm.moveDir.y > 0)
         {
-            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("LeftUp").position, checkerRadius, terrainMask))
+            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Left Up").position, checkerRadius, terrainMask))
             {
-                noTerrainPosition = currentChunk.transform.Find("LeftUp").position;  //Left up
+                noTerrainPosition = currentChunk.transform.Find("Left Up").position;  //Left up
                 SpawnChunk();
             }
         }
         else if (pm.moveDir.x < 0 && pm.moveDir.y < 0)
         {
-            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("LeftDown").position, checkerRadius, terrainMask))
+            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Left Down").position, checkerRadius, terrainMask))
             {
-                noTerrainPosition = currentChunk.transform.Find("LeftDown").position; //Left down
+                noTerrainPosition = currentChunk.transform.Find("Left Down").position; //Left down
                 SpawnChunk();
             }
         }
@@ -99,7 +107,34 @@ public class MapController : MonoBehaviour
     void SpawnChunk()
     {
         int rand = Random.Range(0, terrainChunks.Count);
-        Instantiate(terrainChunks[rand], noTerrainPosition, Quaternion.identity);
+        latestChunk = Instantiate(terrainChunks[rand], noTerrainPosition, Quaternion.identity);
+        spawnedChunks.Add(latestChunk);
     }
 
+    void ChunkOptimzer()
+    {
+        optimizerCooldown -= Time.deltaTime;
+
+        if (optimizerCooldown <= 0f)
+        {
+            optimizerCooldown = optimizerCooldownDur;   //Check every 1 second to save cost, change this value to lower to check more times
+        }
+        else
+        {
+            return;
+        }
+
+        foreach (GameObject chunk in spawnedChunks)
+        {
+            opDist = Vector3.Distance(player.transform.position, chunk.transform.position);
+            if (opDist > maxOpDist)
+            {
+                chunk.SetActive(false);
+            }
+            else
+            {
+                chunk.SetActive(true);
+            }
+        }
+    }
 }

@@ -270,6 +270,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   currentChunk: {fileID: 0}
+  spawnedChunks:
+  - {fileID: 959547453}
+  maxOpDist: 50
+  optimizerCooldownDur: 1
 --- !u!4 &651418415
 Transform:
   m_ObjectHideFlags: 0
@@ -285,6 +289,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &959547453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4882736795871765551, guid: 4334fc3acd991fd458b88f2045d24254, type: 3}
+  m_PrefabInstance: {fileID: 3663221140869977674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1398788549
 GameObject:
   m_ObjectHideFlags: 0
