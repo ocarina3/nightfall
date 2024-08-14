@@ -72,33 +72,33 @@ public class MapController : MonoBehaviour
         }
         else if (pm.moveDir.x > 0 && pm.moveDir.y > 0)
         {
-            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Right Up").position, checkerRadius, terrainMask))
+            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("RightUp").position, checkerRadius, terrainMask))
             {
-                noTerrainPosition = currentChunk.transform.Find("Right Up").position;   //Right up
+                noTerrainPosition = currentChunk.transform.Find("RightUp").position;   //Right up
                 SpawnChunk();
             }
         }
         else if (pm.moveDir.x > 0 && pm.moveDir.y < 0)
         {
-            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Right Down").position, checkerRadius, terrainMask))
+            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("RightDown").position, checkerRadius, terrainMask))
             {
-                noTerrainPosition = currentChunk.transform.Find("Right Down").position;  //Right down
+                noTerrainPosition = currentChunk.transform.Find("RightDown").position;  //Right down
                 SpawnChunk();
             }
         }
         else if (pm.moveDir.x < 0 && pm.moveDir.y > 0)
         {
-            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Left Up").position, checkerRadius, terrainMask))
+            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("LeftUp").position, checkerRadius, terrainMask))
             {
-                noTerrainPosition = currentChunk.transform.Find("Left Up").position;  //Left up
+                noTerrainPosition = currentChunk.transform.Find("LeftUp").position;  //Left up
                 SpawnChunk();
             }
         }
         else if (pm.moveDir.x < 0 && pm.moveDir.y < 0)
         {
-            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Left Down").position, checkerRadius, terrainMask))
+            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("LeftDown").position, checkerRadius, terrainMask))
             {
-                noTerrainPosition = currentChunk.transform.Find("Left Down").position; //Left down
+                noTerrainPosition = currentChunk.transform.Find("LeftDown").position; //Left down
                 SpawnChunk();
             }
         }
