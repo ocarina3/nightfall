@@ -64,7 +64,7 @@ public class MapController : MonoBehaviour
         }
         else if (pm.moveDir.x > 0 && pm.moveDir.y > 0)
         {
-            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Right Up").position, checkerRadius, terrainMask))
+            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("RightUp").position, checkerRadius, terrainMask))
             {
                 noTerrainPosition = currentChunk.transform.Find("Right Up").position;   //Right up
                 SpawnChunk();
@@ -72,7 +72,7 @@ public class MapController : MonoBehaviour
         }
         else if (pm.moveDir.x > 0 && pm.moveDir.y < 0)
         {
-            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Right Down").position, checkerRadius, terrainMask))
+            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("RightDown").position, checkerRadius, terrainMask))
             {
                 noTerrainPosition = currentChunk.transform.Find("Right Down").position;  //Right down
                 SpawnChunk();
@@ -80,7 +80,7 @@ public class MapController : MonoBehaviour
         }
         else if (pm.moveDir.x < 0 && pm.moveDir.y > 0)
         {
-            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Left Up").position, checkerRadius, terrainMask))
+            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("LeftUp").position, checkerRadius, terrainMask))
             {
                 noTerrainPosition = currentChunk.transform.Find("Left Up").position;  //Left up
                 SpawnChunk();
@@ -88,7 +88,7 @@ public class MapController : MonoBehaviour
         }
         else if (pm.moveDir.x < 0 && pm.moveDir.y < 0)
         {
-            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("Left Down").position, checkerRadius, terrainMask))
+            if (!Physics2D.OverlapCircle(currentChunk.transform.Find("LeftDown").position, checkerRadius, terrainMask))
             {
                 noTerrainPosition = currentChunk.transform.Find("Left Down").position; //Left down
                 SpawnChunk();
