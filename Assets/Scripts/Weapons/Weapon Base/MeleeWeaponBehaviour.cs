@@ -8,6 +8,7 @@ public class MeleeWeaponBehaviour : MonoBehaviour
 
     public float destroyAfterSeconds;
 
+    //Current stats
     protected float currentDamage;
     protected float currentSpeed;
     protected float currentCooldownDuration;
@@ -32,6 +33,13 @@ public class MeleeWeaponBehaviour : MonoBehaviour
         {
             EnemyStats enemy = col.GetComponent<EnemyStats>();
             enemy.TakeDamage(currentDamage);
+        }
+        else if (col.CompareTag("Prop"))
+        {
+            if (col.gameObject.TryGetComponent(out BreakableProps breakable))
+            {
+                breakable.TakeDamage(currentDamage);
+            }
         }
     }
 }
