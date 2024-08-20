@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+
+
     // Define the different states of the game
     public enum GameState
     {
@@ -21,8 +26,27 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     public GameObject pauseScreen;
 
+    //Current stat displays
+    public TextMeshProUGUI currentHealthDisplay;
+    public TextMeshProUGUI currentRecoveryDisplay;
+    public TextMeshProUGUI currentMoveSpeedDisplay;
+    public TextMeshProUGUI currentMightDisplay;
+    public TextMeshProUGUI currentProjectileSpeedDisplay;
+    public TextMeshProUGUI currentMagnetDisplay;
+
     void Awake()
     {
+        //Warning check to see if there is another singleton of this kind already in the game
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Debug.LogWarning("EXTRA " + this + " DELETED");
+            Destroy(gameObject);
+        }
+
         DisableScreens();
     }
 
