@@ -19,6 +19,6 @@ MonoBehaviour:
   pierce: 0
   level: 2
   nextLevelPrefab: {fileID: 0}
-  name: 
-  description: 
+  name: "Faca N\xEDvel 2"
+  description: Velocidade aumentada em 5
   icon: {fileID: 97359216, guid: 9d0d19eef909a5b438c2a32c0cb60872, type: 3}

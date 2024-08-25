@@ -19,4 +19,6 @@ MonoBehaviour:
   pierce: 0
   level: 1
   nextLevelPrefab: {fileID: 2075014023431094542, guid: 1c4f29f847419e24fa3ef0392fb3d283, type: 3}
+  name: Faca
+  description: "Atira facas na dire\xE7\xE3o que o jogador est\xE1 direcionado"
   icon: {fileID: 97359216, guid: 9d0d19eef909a5b438c2a32c0cb60872, type: 3}

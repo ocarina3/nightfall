@@ -15,4 +15,6 @@ MonoBehaviour:
   multiplier: 75
   level: 2
   nextLevelPrefab: {fileID: 0}
+  name: "Asas N\xEDvel 2"
+  description: Aumenta velocidade de movimento em 75%
   icon: {fileID: -1916007489, guid: 9d0d19eef909a5b438c2a32c0cb60872, type: 3}

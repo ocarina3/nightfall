@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,8 +31,8 @@ public class InventoryManager : MonoBehaviour
   [System.Serializable]
   public class UpgradeUI
   {
-    public Text upgradeNameDisplay;
-    public Text upgradeDescriptionDisplay;
+    public TextMeshProUGUI upgradeNameDisplay;
+    public TextMeshProUGUI upgradeDescriptionDisplay;
     public Image upgradeIcon;
     public Button upgradeButton;
   }

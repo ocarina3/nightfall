@@ -15,4 +15,6 @@ MonoBehaviour:
   multiplier: 150
   level: 2
   nextLevelPrefab: {fileID: 0}
+  name: "Espinafre N\xEDvel 2"
+  description: Aumenta poder em 150%
   icon: {fileID: -1025678524, guid: 9d0d19eef909a5b438c2a32c0cb60872, type: 3}
