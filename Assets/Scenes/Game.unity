@@ -7619,11 +7619,19 @@ MonoBehaviour:
       enemyCount: 5
       spawnCount: 0
       enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    - enemyName: zombie
+      enemyCount: 5
+      spawnCount: 0
+      enemyPrefab: {fileID: 1449131127727751449, guid: 5b5ef57173a19974bb012b8c94ba950f, type: 3}
+    - enemyName: skeleton
+      enemyCount: 5
+      spawnCount: 0
+      enemyPrefab: {fileID: 453610899953634020, guid: ad84b785a6f85534a8f70dda99ac4d46, type: 3}
     spawnInterval: 1
     spawnCount: 0
   currentWaveCount: 0
   enemiesAlive: 0
-  maxEnemiesAllowed: 4
+  maxEnemiesAllowed: 15
   maxEnemiesReached: 0
   waveInterval: 3
   relativeSpawnPoints:
