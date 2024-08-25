@@ -6,193 +6,249 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+  public static GameManager instance;
 
 
-    // Define the different states of the game
-    public enum GameState
+  // Define the different states of the game
+  public enum GameState
+  {
+    Gameplay,
+    Paused,
+    GameOver,
+    LevelUp
+  }
+
+  // Store the current state of the game
+  public GameState currentState;
+
+  // Store the previous state of the game before it was paused
+  public GameState previousState;
+
+  [Header("Screens")]
+  public GameObject pauseScreen;
+  public GameObject resultsScreen;
+  public GameObject levelUpScreen;
+
+  [Header("Current Stat Displays")]
+  //Current stat displays
+  public TextMeshProUGUI currentHealthDisplay;
+  public TextMeshProUGUI currentRecoveryDisplay;
+  public TextMeshProUGUI currentMoveSpeedDisplay;
+  public TextMeshProUGUI currentMightDisplay;
+  public TextMeshProUGUI currentProjectileSpeedDisplay;
+  public TextMeshProUGUI currentMagnetDisplay;
+
+  [Header("Results Screen Displays")]
+  public Image chosenCharacterImage;
+  public TextMeshProUGUI chosenCharacterName;
+  public TextMeshProUGUI levelReachedDisplay;
+  public TextMeshProUGUI timeSurvivedDisplay;
+  public List<Image> chosenWeaponsUI = new List<Image>(6);
+  public List<Image> chosenPassiveItemsUI = new List<Image>(6);
+
+  [Header("Stopwatch")]
+  public float timeLimit;
+  float stopwatchTime;
+  public Text stopwatchDisplay;
+
+  public bool isGameOver = false;
+
+  public bool choosingUpgrade;
+  public GameObject playerObject;
+
+  void Awake()
+  {
+    //Warning check to see if there is another singleton of this kind already in the game
+    if (instance == null)
     {
-        Gameplay,
-        Paused,
-        GameOver
+      instance = this;
+    }
+    else
+    {
+      Debug.LogWarning("EXTRA " + this + " DELETED");
+      Destroy(gameObject);
     }
 
-    // Store the current state of the game
-    public GameState currentState;
+    DisableScreens();
+  }
 
-    // Store the previous state of the game before it was paused
-    public GameState previousState;
-
-    [Header("Screens")]
-    public GameObject pauseScreen;
-    public GameObject resultsScreen;
-
-    [Header("Current Stat Displays")]
-    //Current stat displays
-    public TextMeshProUGUI currentHealthDisplay;
-    public TextMeshProUGUI currentRecoveryDisplay;
-    public TextMeshProUGUI currentMoveSpeedDisplay;
-    public TextMeshProUGUI currentMightDisplay;
-    public TextMeshProUGUI currentProjectileSpeedDisplay;
-    public TextMeshProUGUI currentMagnetDisplay;
-
-    [Header("Results Screen Displays")]
-    public Image chosenCharacterImage;
-    public TextMeshProUGUI chosenCharacterName;
-    public TextMeshProUGUI levelReachedDisplay;
-    public List<Image> chosenWeaponsUI = new List<Image>(6);
-    public List<Image> chosenPassiveItemsUI = new List<Image>(6);
-
-    public bool isGameOver = false;
-
-    void Awake()
+  void Update()
+  {
+    // Define the behavior for each state
+    switch (currentState)
     {
-        //Warning check to see if there is another singleton of this kind already in the game
-        if (instance == null)
+      case GameState.Gameplay:
+        // Code for the gameplay state
+        CheckForPauseAndResume();
+        UpdateStopwatch();
+        break;
+      case GameState.Paused:
+        // Code for the paused state
+        CheckForPauseAndResume();
+        break;
+      case GameState.GameOver:
+        // Code for the game over state
+        if (!isGameOver)
         {
-            instance = this;
+          isGameOver = true;
+          Time.timeScale = 0f;
+          Debug.Log("THE GAME IS OVER");
+          DisplayResults();
         }
-        else
+        break;
+      case GameState.LevelUp:
+        if (!choosingUpgrade)
         {
-            Debug.LogWarning("EXTRA " + this + " DELETED");
-            Destroy(gameObject);
+          choosingUpgrade = true;
+          Time.timeScale = 0f;
+          Debug.Log("Upgrades shown");
+          levelUpScreen.SetActive(true);
         }
-
-        DisableScreens();
+        break;
+      default:
+        Debug.LogWarning("STATE DOES NOT EXIST");
+        break;
     }
+  }
 
-    void Update()
+  // Define the method to change the state of the game
+  public void ChangeState(GameState newState)
+  {
+    currentState = newState;
+  }
+
+  public void PauseGame()
+  {
+    if (currentState != GameState.Paused)
     {
-        // Define the behavior for each state
-        switch (currentState)
-        {
-            case GameState.Gameplay:
-                // Code for the gameplay state
-                CheckForPauseAndResume();
-                break;
-            case GameState.Paused:
-                // Code for the paused state
-                CheckForPauseAndResume();
-                break;
-            case GameState.GameOver:
-                // Code for the game over state
-                if(!isGameOver){
-                    isGameOver = true;
-                    Time.timeScale = 0f;
-                    Debug.Log("THE GAME IS OVER");
-                    DisplayResults();
-                }
-                break;
-            default:
-                Debug.LogWarning("STATE DOES NOT EXIST");
-                break;
-        }
+      previousState = currentState;
+      ChangeState(GameState.Paused);
+      Time.timeScale = 0f; // Stop the game
+      pauseScreen.SetActive(true); // Enable the pause screen
+      Debug.Log("Game is paused");
     }
+  }
 
-    // Define the method to change the state of the game
-    public void ChangeState(GameState newState)
+  public void ResumeGame()
+  {
+    if (currentState == GameState.Paused)
     {
-        currentState = newState;
+      ChangeState(previousState);
+      Time.timeScale = 1f; // Resume the game
+      pauseScreen.SetActive(false); //Disable the pause screen
+      Debug.Log("Game is resumed");
     }
+  }
 
-    public void PauseGame()
+  // Define the method to check for pause and resume input
+  void CheckForPauseAndResume()
+  {
+    if (Input.GetKeyDown(KeyCode.Escape))
     {
-        if (currentState != GameState.Paused)
-        {
-            previousState = currentState;
-            ChangeState(GameState.Paused);
-            Time.timeScale = 0f; // Stop the game
-            pauseScreen.SetActive(true); // Enable the pause screen
-            Debug.Log("Game is paused");
-        }
+      if (currentState == GameState.Paused)
+      {
+        ResumeGame();
+      }
+      else
+      {
+        PauseGame();
+      }
     }
+  }
 
-    public void ResumeGame()
+  void DisableScreens()
+  {
+    pauseScreen.SetActive(false);
+    resultsScreen.SetActive(false);
+    levelUpScreen.SetActive(false);
+  }
+
+  public void GameOver()
+  {
+    timeSurvivedDisplay.text = stopwatchDisplay.text;
+    ChangeState(GameState.GameOver);
+  }
+
+  void DisplayResults()
+  {
+    resultsScreen.SetActive(true);
+  }
+
+  public void AssignChosenCharacterUI(CharacterScriptableObject chosenCharacterData)
+  {
+    chosenCharacterImage.sprite = chosenCharacterData.Icon;
+    chosenCharacterName.text = chosenCharacterData.name;
+  }
+
+  public void AssignLevelReachedUI(int levelReachedData)
+  {
+    levelReachedDisplay.text = levelReachedData.ToString();
+  }
+
+  public void AssignChosenWeaponsAndPassiveItemsUI(List<Image> chosenWeaponsData, List<Image> chosenPassiveItemsData)
+  {
+    if (chosenWeaponsData.Count != chosenWeaponsUI.Count || chosenPassiveItemsData.Count != chosenPassiveItemsUI.Count)
     {
-        if (currentState == GameState.Paused)
-        {
-            ChangeState(previousState);
-            Time.timeScale = 1f; // Resume the game
-            pauseScreen.SetActive(false); //Disable the pause screen
-            Debug.Log("Game is resumed");
-        }
+      Debug.Log("Chosen Weapons and passive items data lists have different lengths");
+      return;
     }
 
-    // Define the method to check for pause and resume input
-    void CheckForPauseAndResume()
+    for (int i = 0; i < chosenWeaponsUI.Count; i++)
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (currentState == GameState.Paused)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
-        }
+      if (chosenWeaponsData[i].sprite)
+      {
+        chosenWeaponsUI[i].enabled = true;
+        chosenWeaponsUI[i].sprite = chosenWeaponsData[i].sprite;
+      }
+      else
+      {
+        chosenWeaponsUI[i].enabled = false;
+      }
     }
 
-    void DisableScreens()
+    for (int i = 0; i < chosenPassiveItemsUI.Count; i++)
     {
-        pauseScreen.SetActive(false);
-        resultsScreen.SetActive(false);
+      if (chosenPassiveItemsData[i].sprite)
+      {
+        chosenPassiveItemsUI[i].enabled = true;
+        chosenPassiveItemsUI[i].sprite = chosenPassiveItemsData[i].sprite;
+      }
+      else
+      {
+        chosenPassiveItemsUI[i].enabled = false;
+      }
     }
+  }
 
-    public void GameOver()
+  void UpdateStopwatch()
+  {
+    stopwatchTime += Time.deltaTime;
+
+    UpdateStopwatchDisplay();
+
+    if (stopwatchTime >= timeLimit)
     {
-        ChangeState(GameState.GameOver);
+      GameOver();
     }
+  }
 
-    void DisplayResults()
-    {
-        resultsScreen.SetActive(true);
-    }
+  void UpdateStopwatchDisplay()
+  {
+    int minutes = Mathf.FloorToInt(stopwatchTime / 60);
+    int seconds = Mathf.FloorToInt(stopwatchTime % 60);
+    stopwatchDisplay.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+  }
 
-    public void AssignChosenCharacterUI(CharacterScriptableObject chosenCharacterData)
-    {
-        chosenCharacterImage.sprite = chosenCharacterData.Icon;
-        chosenCharacterName.text = chosenCharacterData.name;
-    }
-
-    public void AssignLevelReachedUI(int levelReachedData)
-    {
-        levelReachedDisplay.text = levelReachedData.ToString();
-    }
-
-    public void AssignChosenWeaponsAndPassiveItemsUI(List<Image> chosenWeaponsData, List<Image> chosenPassiveItemsData)
-    {
-        if(chosenWeaponsData.Count != chosenWeaponsUI.Count || chosenPassiveItemsData.Count != chosenPassiveItemsUI.Count)
-        {
-            Debug.Log("Chosen Weapons and passive items data lists have different lengths");
-            return;
-        }
-
-        for(int i = 0; i < chosenWeaponsUI.Count; i++)
-        {
-            if(chosenWeaponsData[i].sprite)
-            {
-                chosenWeaponsUI[i].enabled = true;
-                chosenWeaponsUI[i].sprite = chosenWeaponsData[i].sprite;
-            }
-            else
-            {
-                chosenWeaponsUI[i].enabled = false;
-            }
-        }
-
-        for(int i = 0; i < chosenPassiveItemsUI.Count; i++)
-        {
-            if(chosenPassiveItemsData[i].sprite)
-            {
-                chosenPassiveItemsUI[i].enabled = true;
-                chosenPassiveItemsUI[i].sprite = chosenPassiveItemsData[i].sprite;
-            }
-            else
-            {
-                chosenPassiveItemsUI[i].enabled = false;
-            }
-        }
-    }
+  public void StartLevelUp()
+  {
+    ChangeState(GameState.LevelUp);
+    playerObject.SendMessage("RemoveAndApplyUpgrades");
+  }
+  public void EndLevelUp()
+  {
+    choosingUpgrade = false;
+    Time.timeScale = 1f;
+    levelUpScreen.SetActive(false);
+    ChangeState(GameState.Gameplay);
+  }
 }
