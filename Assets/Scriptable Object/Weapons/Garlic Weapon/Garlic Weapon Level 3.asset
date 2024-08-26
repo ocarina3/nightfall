@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6e375fb2168f404b94f17ec0272b35d, type: 3}
-  m_Name: Garlic Weapon Level 2
+  m_Name: Garlic Weapon Level 3
   m_EditorClassIdentifier: 
-  prefab: {fileID: 123036830159920069, guid: 842352a6d09ce2f42899072994e169f1, type: 3}
-  damage: 5
+  prefab: {fileID: 123036830159920069, guid: c584d73641cb2b74a94194eb4a0b7393, type: 3}
+  damage: 7
   speed: 0
   cooldownDuration: 2.5
   pierce: 0
   level: 2
-  nextLevelPrefab: {fileID: 737337828084127661, guid: b335009cb3364744eb6a9b547daa7775, type: 3}
-  name: "Alho N\xEDvel 2"
-  description: Tempo de recarga reduzido em 2.5
+  nextLevelPrefab: {fileID: 0}
+  name: "Alho N\xEDvel 3"
+  description: Aumento de dano em 2
   icon: {fileID: 1543760891, guid: 9d0d19eef909a5b438c2a32c0cb60872, type: 3}
