@@ -3670,7 +3670,6 @@ MonoBehaviour:
   - {fileID: 4882736795871765551, guid: ba0e5ce1c4ddb5a40bf668ffb8e4d3e1, type: 3}
   player: {fileID: 1398788549}
   checkerRadius: 0.2
-  noTerrainPosition: {x: 0, y: 0, z: 0}
   terrainMask:
     serializedVersion: 2
     m_Bits: 64
@@ -3753,7 +3752,7 @@ MonoBehaviour:
   - {fileID: 1746413883}
   - {fileID: 2048355070}
   - {fileID: 2066315468}
-  timeLimit: 75
+  timeLimit: 60
   stopwatchDisplay: {fileID: 491489345}
   isGameOver: 0
   choosingUpgrade: 0
@@ -4105,7 +4104,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Menu
+          m_StringArgument: Title Screen
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &749178352
@@ -8189,7 +8188,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Menu
+          m_StringArgument: Title Screen
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1708474243
@@ -10146,21 +10145,52 @@ MonoBehaviour:
       enemyCount: 5
       spawnCount: 0
       enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
-    - enemyName: zombie
-      enemyCount: 5
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: wave 2
+    waveQuota: 0
+    enemyGroups:
+    - enemyName: red bat
+      enemyCount: 2
       spawnCount: 0
-      enemyPrefab: {fileID: 1449131127727751449, guid: 5b5ef57173a19974bb012b8c94ba950f, type: 3}
+      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
+    spawnInterval: 3
+    spawnCount: 0
+  - waveName: wave 3
+    waveQuota: 0
+    enemyGroups:
+    - enemyName: bat
+      enemyCount: 1
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    - enemyName: red bat
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: wave 4
+    waveQuota: 0
+    enemyGroups:
+    - enemyName: bat
+      enemyCount: 1
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    - enemyName: red bat
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
     - enemyName: skeleton
-      enemyCount: 5
+      enemyCount: 1
       spawnCount: 0
       enemyPrefab: {fileID: 453610899953634020, guid: ad84b785a6f85534a8f70dda99ac4d46, type: 3}
     spawnInterval: 1
     spawnCount: 0
   currentWaveCount: 0
   enemiesAlive: 0
-  maxEnemiesAllowed: 15
+  maxEnemiesAllowed: 4
   maxEnemiesReached: 0
-  waveInterval: 3
+  waveInterval: 5
   relativeSpawnPoints:
   - {fileID: 1111747133}
   - {fileID: 1216604057}
