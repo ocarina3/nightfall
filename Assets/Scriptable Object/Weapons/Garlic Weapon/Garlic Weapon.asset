@@ -21,4 +21,5 @@ MonoBehaviour:
   nextLevelPrefab: {fileID: 737337828084127661, guid: 8abe92a705c6e2345b6987f4b663c136, type: 3}
   name: Alho
   description: "D\xE1 dano em todos os inimigos dentro da \xE1rea"
-  icon: {fileID: 1543760891, guid: 9d0d19eef909a5b438c2a32c0cb60872, type: 3}
+  icon: {fileID: -706784038, guid: 7237b2a1622b150449d1fc391275258f, type: 3}
+  evolvedUpgradeToRemove: 0

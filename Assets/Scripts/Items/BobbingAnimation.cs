@@ -8,14 +8,19 @@ public class BobbingAnimation : MonoBehaviour
     public float magnitude;
     public Vector3 direction;
     Vector3 initialPosition;
+    Pickup pickup;
 
     void Start()
     {
+        pickup = GetComponent<Pickup>();
         initialPosition = transform.position;
     }
 
     void Update()
     {
-        transform.position = initialPosition + direction * Mathf.Sin(Time.time * frequency) * magnitude;
+        if(pickup && !pickup.hasBeenCollected) 
+        {
+            transform.position = initialPosition + direction * Mathf.Sin(Time.time * frequency) * magnitude;
+        }        
     }
 }

@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Garlic Weapon Level 3
   m_EditorClassIdentifier: 
   prefab: {fileID: 123036830159920069, guid: c584d73641cb2b74a94194eb4a0b7393, type: 3}
-  damage: 7
+  damage: 10
   speed: 0
-  cooldownDuration: 2.5
+  cooldownDuration: 2
   pierce: 0
   level: 2
   nextLevelPrefab: {fileID: 0}
   name: "Alho N\xEDvel 3"
-  description: Aumento de dano em 2
-  icon: {fileID: 1543760891, guid: 9d0d19eef909a5b438c2a32c0cb60872, type: 3}
+  description: Aumento de dano em 5
+  icon: {fileID: -706784038, guid: 7237b2a1622b150449d1fc391275258f, type: 3}
+  evolvedUpgradeToRemove: 0
