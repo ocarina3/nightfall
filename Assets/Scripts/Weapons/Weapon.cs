@@ -6,7 +6,7 @@ using UnityEngine;
 /// Component to be attached to all Weapon prefabs. The Weapon prefab works together with the WeaponData
 /// ScriptableObjects to manage and run the behaviours of all weapons in the game.
 /// </summary>
-public abstract class Weapon : MonoBehaviour
+public abstract class Weapon : Item
 {
     [System.Serializable]
     public struct Stats
@@ -55,10 +55,6 @@ public abstract class Weapon : MonoBehaviour
         }
     }
 
-    public int currentLevel = 1, maxLevel = 1;
-
-    protected PlayerStats owner;
-
     protected Stats currentStats;
 
     public WeaponData data;
@@ -70,8 +66,7 @@ public abstract class Weapon : MonoBehaviour
     // For dynamically created weapons, call initialise to set everything up.
     public virtual void Initialise(WeaponData data)
     {
-        maxLevel = data.maxLevel;
-        owner = FindObjectOfType<PlayerStats>();
+        base.Initialise(data);
 
         this.data = data;
         currentStats = data.baseStats;
@@ -103,14 +98,10 @@ public abstract class Weapon : MonoBehaviour
         }
     }
 
-    public virtual bool CanLevelUp()
-    {
-        return currentLevel <= maxLevel;
-    }
-
     // Levels up the weapon by 1, and calculates the corresponding stats.
-    public virtual bool DoLevelUp()
+    public override bool DoLevelUp()
     {
+        base.DoLevelUp();
 
         // Prevent level up if we are already at max level.
         if (!CanLevelUp())

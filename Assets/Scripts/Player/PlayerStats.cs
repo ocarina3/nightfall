@@ -26,7 +26,7 @@ public class PlayerStats : MonoBehaviour
             if (currentHealth != value)
             {
                 currentHealth = value;
-                if (GameManager.instance != null)
+                if(GameManager.instance != null)
                 {
                     GameManager.instance.currentHealthDisplay.text = "Health: " + currentHealth;
                 }
@@ -163,7 +163,7 @@ public class PlayerStats : MonoBehaviour
     [Header("UI")]
     public Image healthBar;
     public Image expBar;
-    public TextMeshProUGUI levelText;
+    public TMP_Text levelText;
 
     void Awake()
     {
@@ -220,6 +220,10 @@ public class PlayerStats : MonoBehaviour
         Recover();
     }
 
+    public void RecalculateStats()
+    {
+    }
+
     public void IncreaseExperience(int amount)
     {
         experience += amount;
@@ -257,12 +261,14 @@ public class PlayerStats : MonoBehaviour
 
     void UpdateExpBar()
     {
+        // Update exp bar fill amount
         expBar.fillAmount = (float)experience / experienceCap;
     }
 
     void UpdateLevelText()
     {
-        levelText.text = "Nível: " + level;
+        // Update level text
+        levelText.text = "LV " + level.ToString();
     }
 
     public void TakeDamage(float dmg)
@@ -271,9 +277,9 @@ public class PlayerStats : MonoBehaviour
         if (!isInvincible)
         {
             CurrentHealth -= dmg;
-
+            
             // If there is a damage effect assigned, play it.
-            if(damageEffect) Destroy(Instantiate(damageEffect, transform.position, Quaternion.identity), 5f);
+            if(damageEffect) Instantiate(damageEffect, transform.position, Quaternion.identity);
 
             invincibilityTimer = invincibilityDuration;
             isInvincible = true;
@@ -289,12 +295,13 @@ public class PlayerStats : MonoBehaviour
 
     void UpdateHealthBar()
     {
+        //Update the health bar
         healthBar.fillAmount = CurrentHealth / characterData.MaxHealth;
     }
 
     public void Kill()
     {
-        if (!GameManager.instance.isGameOver)
+        if(!GameManager.instance.isGameOver)
         {
             GameManager.instance.AssignLevelReachedUI(level);
             GameManager.instance.AssignChosenWeaponsAndPassiveItemsUI(inventory.weaponUISlots, inventory.passiveItemUISlots);
