@@ -15,7 +15,7 @@ public class PlayerInventory : MonoBehaviour
         public void Assign(Item assignedItem)
         {
             item = assignedItem;
-            if(item is Weapon)
+            if (item is Weapon)
             {
                 Weapon w = item as Weapon;
                 image.enabled = true;
@@ -103,7 +103,7 @@ public class PlayerInventory : MonoBehaviour
         // Remove this weapon from the upgrade pool.
         if (removeUpgradeAvailability) availableWeapons.Remove(data);
 
-        for(int i = 0; i < weaponSlots.Count; i++)
+        for (int i = 0; i < weaponSlots.Count; i++)
         {
             Weapon w = weaponSlots[i].item as Weapon;
             if (w.data == data)
@@ -144,7 +144,7 @@ public class PlayerInventory : MonoBehaviour
     public bool Remove(ItemData data, bool removeUpgradeAvailability = false)
     {
         if (data is PassiveData) return Remove(data as PassiveData, removeUpgradeAvailability);
-        else if(data is WeaponData) return Remove(data as WeaponData, removeUpgradeAvailability);
+        else if (data is WeaponData) return Remove(data as WeaponData, removeUpgradeAvailability);
         return false;
     }
 
@@ -155,7 +155,7 @@ public class PlayerInventory : MonoBehaviour
         int slotNum = -1;
 
         // Try to find an empty slot.
-        for(int i = 0; i < weaponSlots.Capacity; i++)
+        for (int i = 0; i < weaponSlots.Capacity; i++)
         {
             if (weaponSlots[i].IsEmpty())
             {
@@ -276,7 +276,7 @@ public class PlayerInventory : MonoBehaviour
         if (passiveSlots.Count > slotIndex)
         {
             Passive p = passiveSlots[slotIndex].item as Passive;
-            if(!p.DoLevelUp())
+            if (!p.DoLevelUp())
             {
                 Debug.LogWarning(string.Format(
                     "Failed to level up {0}.",
@@ -327,7 +327,7 @@ public class PlayerInventory : MonoBehaviour
             // Generates an active weapon upgrade.
             if (upgradeType == 1)
             {
-                
+
                 // Pick a weapon upgrade, then remove it so that we don't get it twice.
                 WeaponData chosenWeaponUpgrade = availableWeaponUpgrades[UnityEngine.Random.Range(0, availableWeaponUpgrades.Count)];
                 availableWeaponUpgrades.Remove(chosenWeaponUpgrade);

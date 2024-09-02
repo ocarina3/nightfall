@@ -136,7 +136,7 @@ public class InventoryManager : MonoBehaviour
 
         foreach (var upgradeOption in upgradeUIOptions)
         {
-            if(availableWeaponUpgrades.Count == 0 && availablePassiveItemUpgrades.Count == 0)
+            if (availableWeaponUpgrades.Count == 0 && availablePassiveItemUpgrades.Count == 0)
             {
                 return;
             }
@@ -155,7 +155,7 @@ public class InventoryManager : MonoBehaviour
             {
                 upgradeType = Random.Range(1, 3);
             }
-            
+
             if (upgradeType == 1)
             {
                 WeaponUpgrade choosenWeaponUpgrade = availableWeaponUpgrades[Random.Range(0, availableWeaponUpgrades.Count)];
@@ -174,12 +174,12 @@ public class InventoryManager : MonoBehaviour
                             newWeapon = false;
                             if (!newWeapon)
                             {
-                                if(!choosenWeaponUpgrade.weaponData.NextLevelPrefab)
+                                if (!choosenWeaponUpgrade.weaponData.NextLevelPrefab)
                                 {
                                     DisableUpgradeUI(upgradeOption);
                                     break;
                                 }
-                                
+
                                 upgradeOption.upgradeButton.onClick.AddListener(() => LevelUpWeapon(i, choosenWeaponUpgrade.weaponUpgradeIndex));
                                 upgradeOption.upgradeDescriptionDisplay.text = choosenWeaponUpgrade.weaponData.NextLevelPrefab.GetComponent<WeaponController>().weaponData.Description;
                                 upgradeOption.upgradeNameDisplay.text = choosenWeaponUpgrade.weaponData.NextLevelPrefab.GetComponent<WeaponController>().weaponData.Name;
@@ -193,7 +193,7 @@ public class InventoryManager : MonoBehaviour
                     }
                     if (newWeapon)
                     {
-                        upgradeOption.upgradeButton.onClick.AddListener(() => player.SpawnWeapon(choosenWeaponUpgrade.initialWeapon));
+                        // upgradeOption.upgradeButton.onClick.AddListener(() => player.SpawnWeapon(choosenWeaponUpgrade.initialWeapon));
                         upgradeOption.upgradeDescriptionDisplay.text = choosenWeaponUpgrade.weaponData.Description;
                         upgradeOption.upgradeNameDisplay.text = choosenWeaponUpgrade.weaponData.Name;
                     }
@@ -220,7 +220,7 @@ public class InventoryManager : MonoBehaviour
 
                             if (!newPassiveItem)
                             {
-                                if(!chosenPassiveItemUpgrade.passiveItemData.NextLevelPrefab)
+                                if (!chosenPassiveItemUpgrade.passiveItemData.NextLevelPrefab)
                                 {
                                     DisableUpgradeUI(upgradeOption);
                                     break;
@@ -239,7 +239,7 @@ public class InventoryManager : MonoBehaviour
                     }
                     if (newPassiveItem)
                     {
-                        upgradeOption.upgradeButton.onClick.AddListener(() => player.SpawnPassiveItem(chosenPassiveItemUpgrade.initialPassiveItem));
+                        // upgradeOption.upgradeButton.onClick.AddListener(() => player.SpawnPassiveItem(chosenPassiveItemUpgrade.initialPassiveItem));
                         upgradeOption.upgradeDescriptionDisplay.text = chosenPassiveItemUpgrade.passiveItemData.Description;
                         upgradeOption.upgradeNameDisplay.text = chosenPassiveItemUpgrade.passiveItemData.Name;
                     }
@@ -254,7 +254,7 @@ public class InventoryManager : MonoBehaviour
         foreach (var upgradeOtion in upgradeUIOptions)
         {
             upgradeOtion.upgradeButton.onClick.RemoveAllListeners();
-            DisableUpgradeUI(upgradeOtion); 
+            DisableUpgradeUI(upgradeOtion);
         }
     }
 
@@ -284,13 +284,13 @@ public class InventoryManager : MonoBehaviour
             {
                 foreach (PassiveItem catalyst in passiveItemSlots)
                 {
-                    if (catalyst != null) 
+                    if (catalyst != null)
                     {
                         foreach (WeaponEvolutionBlueprint evolution in weaponEvolutions)
                         {
                             if (weapon.weaponData.Level >= evolution.baseWeaponData.Level && catalyst.passiveItemData.Level >= evolution.catalystPassiveItemData.Level)
                             {
-                                possibleEvolutions .Add(evolution);
+                                possibleEvolutions.Add(evolution);
                             }
                         }
                     }
@@ -316,12 +316,12 @@ public class InventoryManager : MonoBehaviour
             {
                 PassiveItem catalyst = passiveItemSlots[catalystSlotIndex];
 
-                if (!catalyst) 
+                if (!catalyst)
                 {
                     continue;
                 }
 
-                if (weapon && catalyst && 
+                if (weapon && catalyst &&
                     weapon.weaponData.Level >= evolution.baseWeaponData.Level &&
                     catalyst.passiveItemData.Level >= evolution.catalystPassiveItemData.Level)
                 {

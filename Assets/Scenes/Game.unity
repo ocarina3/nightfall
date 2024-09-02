@@ -6744,6 +6744,7 @@ GameObject:
   - component: {fileID: 1398788556}
   - component: {fileID: 1398788557}
   - component: {fileID: 1398788558}
+  - component: {fileID: 1398788559}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6953,6 +6954,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 353a250513f80904e9cb5d55907b683e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseStats:
+    maxHealth: 0
+    recovery: 0
+    moveSpeed: 0
+    might: 0
+    speed: 0
+    magnet: 0
+  actualStats:
+    maxHealth: 0
+    recovery: 0
+    moveSpeed: 0
+    might: 0
+    speed: 0
+    magnet: 0
   damageEffect: {fileID: 8447907138309583095, guid: 5187ed0ef4db6ad41a48e8dae926f72f, type: 3}
   experience: 0
   level: 1
@@ -6980,7 +6995,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398788549}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6553ed5faa73bdc4ba355bdb8bfc712a, type: 3}
   m_Name: 
@@ -7048,6 +7063,49 @@ MonoBehaviour:
     upgradeButton: {fileID: 1927069728}
   weaponEvolutions:
   - {fileID: 11400000, guid: 31aec19fa8e752a42878bf69c32acc83, type: 2}
+--- !u!114 &1398788559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398788549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6065ffa6a14647343bebad212739631b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSlots:
+  - item: {fileID: 0}
+    image: {fileID: 2040186307}
+  - item: {fileID: 0}
+    image: {fileID: 1144962700}
+  - item: {fileID: 0}
+    image: {fileID: 1638929774}
+  - item: {fileID: 0}
+    image: {fileID: 1836274151}
+  - item: {fileID: 0}
+    image: {fileID: 1531759288}
+  - item: {fileID: 0}
+    image: {fileID: 1850305630}
+  passiveSlots:
+  - item: {fileID: 0}
+    image: {fileID: 2025758259}
+  - item: {fileID: 0}
+    image: {fileID: 377754037}
+  - item: {fileID: 0}
+    image: {fileID: 1533922218}
+  - item: {fileID: 0}
+    image: {fileID: 587640040}
+  - item: {fileID: 0}
+    image: {fileID: 710443405}
+  - item: {fileID: 0}
+    image: {fileID: 785149189}
+  availableWeapons:
+  - {fileID: 11400000, guid: 46add6bf12bf7d548ab9a66a452e0014, type: 2}
+  availablePassives:
+  - {fileID: 0}
+  upgradeUIOptions: []
 --- !u!1 &1419058511
 GameObject:
   m_ObjectHideFlags: 0
