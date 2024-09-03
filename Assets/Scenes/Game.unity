@@ -7102,7 +7102,7 @@ MonoBehaviour:
   - item: {fileID: 0}
     image: {fileID: 785149189}
   availableWeapons:
-  - {fileID: 11400000, guid: 46add6bf12bf7d548ab9a66a452e0014, type: 2}
+  - {fileID: 11400000, guid: 92c8b64d1cc47c54caddc3162adbe53f, type: 2}
   availablePassives:
   - {fileID: 0}
   upgradeUIOptions: []

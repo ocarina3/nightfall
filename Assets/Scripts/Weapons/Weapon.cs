@@ -15,7 +15,7 @@ public abstract class Weapon : Item
 
         [Header("Visuals")]
         public Projectile projectilePrefab; // If attached, a projectile will spawn every time the weapon cools down.
-        //public Aura auraPrefab; // If attached, an aura will spawn when weapon is equipped.
+        public Aura auraPrefab; // If attached, an aura will spawn when weapon is equipped.
         public ParticleSystem hitEffect;
         public Rect spawnVariance;
 
@@ -77,13 +77,13 @@ public abstract class Weapon : Item
     protected virtual void Awake()
     {
         // Assign the stats early, as it will be used by other scripts later on.
-        if(data) currentStats = data.baseStats;
+        if (data) currentStats = data.baseStats;
     }
 
     protected virtual void Start()
     {
         // Don't initialise the weapon if the weapon data is not assigned.
-        if(data)
+        if (data)
         {
             Initialise(data);
         }
@@ -126,8 +126,9 @@ public abstract class Weapon : Item
     // This doesn't do anything. We have to override this at the child class to add a behaviour.
     protected virtual bool Attack(int attackCount = 1)
     {
-        if(CanAttack()) {
-	    currentCooldown += currentStats.cooldown;
+        if (CanAttack())
+        {
+            currentCooldown += currentStats.cooldown;
             return true;
         }
         return false;
