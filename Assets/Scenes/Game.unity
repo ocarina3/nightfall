@@ -7026,7 +7026,7 @@ MonoBehaviour:
   - item: {fileID: 0}
     image: {fileID: 785149189}
   availableWeapons:
-  - {fileID: 11400000, guid: 92c8b64d1cc47c54caddc3162adbe53f, type: 2}
+  - {fileID: 11400000, guid: 46add6bf12bf7d548ab9a66a452e0014, type: 2}
   - {fileID: 11400000, guid: 132d9d8de1b87584f8ba31f4c1f284c4, type: 2}
   availablePassives:
   - {fileID: 11400000, guid: 8edb9fe8193b473419c5ed96b5ebf3ce, type: 2}
