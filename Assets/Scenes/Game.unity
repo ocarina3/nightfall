@@ -6743,7 +6743,6 @@ GameObject:
   - component: {fileID: 1398788555}
   - component: {fileID: 1398788556}
   - component: {fileID: 1398788557}
-  - component: {fileID: 1398788558}
   - component: {fileID: 1398788559}
   m_Layer: 0
   m_Name: Player
@@ -6988,81 +6987,6 @@ MonoBehaviour:
   healthBar: {fileID: 970555035}
   expBar: {fileID: 1353014090}
   levelText: {fileID: 39984169}
---- !u!114 &1398788558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398788549}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6553ed5faa73bdc4ba355bdb8bfc712a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponSlots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  weaponLevels: 000000000000000000000000000000000000000000000000
-  weaponUISlots:
-  - {fileID: 2040186307}
-  - {fileID: 1144962700}
-  - {fileID: 1638929774}
-  - {fileID: 1836274151}
-  - {fileID: 1531759288}
-  - {fileID: 1850305630}
-  passiveItemSlots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  passiveItemLevels: 000000000000000000000000000000000000000000000000
-  passiveItemUISlots:
-  - {fileID: 2025758259}
-  - {fileID: 377754037}
-  - {fileID: 1533922218}
-  - {fileID: 587640040}
-  - {fileID: 710443405}
-  - {fileID: 785149189}
-  weaponUpgradeOptions:
-  - weaponUpgradeIndex: 0
-    initialWeapon: {fileID: 2075014023431094542, guid: 6df7db2ae51e3994d9d600d24bc7f439, type: 3}
-    weaponData: {fileID: 11400000, guid: 1f0a67508c975d44ea71daa3a8c39cab, type: 2}
-  - weaponUpgradeIndex: 1
-    initialWeapon: {fileID: 737337828084127661, guid: 5a401ede8e6b6a541b030b113a2baf90, type: 3}
-    weaponData: {fileID: 11400000, guid: 3c664189bbd21d34c9834087310e0257, type: 2}
-  passiveItemUpgradeOptions:
-  - passiveItemUpgradeIndex: 0
-    initialPassiveItem: {fileID: 4764830061782025403, guid: 435fb375a43b2fc4296d50c274f1a942, type: 3}
-    passiveItemData: {fileID: 11400000, guid: fc42d69e6e859784a932badbef8b35f3, type: 2}
-  - passiveItemUpgradeIndex: 1
-    initialPassiveItem: {fileID: 3033977004679338596, guid: 156e66ceeb7d71b4d98dcccaac8e299d, type: 3}
-    passiveItemData: {fileID: 11400000, guid: 5219a47d3d5ee1d40adb53b85fbd1a8c, type: 2}
-  upgradeUIOptions:
-  - upgradeNameDisplay: {fileID: 170626061}
-    upgradeDescriptionDisplay: {fileID: 1419058513}
-    upgradeIcon: {fileID: 1431993683}
-    upgradeButton: {fileID: 2014110031}
-  - upgradeNameDisplay: {fileID: 73080592}
-    upgradeDescriptionDisplay: {fileID: 926308268}
-    upgradeIcon: {fileID: 845742300}
-    upgradeButton: {fileID: 251492808}
-  - upgradeNameDisplay: {fileID: 1885658616}
-    upgradeDescriptionDisplay: {fileID: 1331862165}
-    upgradeIcon: {fileID: 1322962862}
-    upgradeButton: {fileID: 330877117}
-  - upgradeNameDisplay: {fileID: 1372009787}
-    upgradeDescriptionDisplay: {fileID: 2032505773}
-    upgradeIcon: {fileID: 179783020}
-    upgradeButton: {fileID: 1927069728}
-  weaponEvolutions:
-  - {fileID: 11400000, guid: 31aec19fa8e752a42878bf69c32acc83, type: 2}
 --- !u!114 &1398788559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7103,9 +7027,28 @@ MonoBehaviour:
     image: {fileID: 785149189}
   availableWeapons:
   - {fileID: 11400000, guid: 92c8b64d1cc47c54caddc3162adbe53f, type: 2}
+  - {fileID: 11400000, guid: 132d9d8de1b87584f8ba31f4c1f284c4, type: 2}
   availablePassives:
-  - {fileID: 0}
-  upgradeUIOptions: []
+  - {fileID: 11400000, guid: 8edb9fe8193b473419c5ed96b5ebf3ce, type: 2}
+  - {fileID: 11400000, guid: 5532d53957a30e147966c9092ffc6c85, type: 2}
+  - {fileID: 11400000, guid: 1532ba939f3366e4586bf9ce6bb1d6de, type: 2}
+  upgradeUIOptions:
+  - upgradeNameDisplay: {fileID: 170626061}
+    upgradeDescriptionDisplay: {fileID: 1419058513}
+    upgradeIcon: {fileID: 1431993683}
+    upgradeButton: {fileID: 2014110031}
+  - upgradeNameDisplay: {fileID: 73080592}
+    upgradeDescriptionDisplay: {fileID: 926308268}
+    upgradeIcon: {fileID: 845742300}
+    upgradeButton: {fileID: 251492808}
+  - upgradeNameDisplay: {fileID: 1885658616}
+    upgradeDescriptionDisplay: {fileID: 1331862165}
+    upgradeIcon: {fileID: 1322962862}
+    upgradeButton: {fileID: 330877117}
+  - upgradeNameDisplay: {fileID: 1372009787}
+    upgradeDescriptionDisplay: {fileID: 2032505773}
+    upgradeIcon: {fileID: 179783020}
+    upgradeButton: {fileID: 1927069728}
 --- !u!1 &1419058511
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fae704dd6049ce4cb2da58c0df7533a, type: 3}
   m_Name: Knife
   m_EditorClassIdentifier: 
-  icon: {fileID: 97359216, guid: 9d0d19eef909a5b438c2a32c0cb60872, type: 3}
+  icon: {fileID: -226360424, guid: 9d0d19eef909a5b438c2a32c0cb60872, type: 3}
   maxLevel: 5
   evolutionData:
   - name: Soul Eater
@@ -52,7 +52,7 @@ MonoBehaviour:
   linearGrowth:
   - name: "N\xEDvel 2"
     description: "Atira mais 1 proj\xE9til"
-    projectilePrefab: {fileID: 0}
+    projectilePrefab: {fileID: 4396335964037200229, guid: 7a23b96f550fa7c4593992723ab23eec, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
     spawnVariance:
@@ -65,7 +65,7 @@ MonoBehaviour:
     damage: 0
     damageVariance: 0
     area: 0
-    speed: 0
+    speed: 10
     cooldown: 0
     projectileInterval: 0
     knockback: 0
