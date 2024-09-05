@@ -18,7 +18,8 @@ MonoBehaviour:
   behaviour: AuraWeapon
   baseStats:
     name: Alho
-    description: 
+    description: "Cria uma aura delimitada por 3 c\xEDrculos e d\xE1 dano em todos
+      dentro"
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: -5671752530922812645, guid: d7805ae8d749419489d602dd9d36f95a, type: 3}
     hitEffect: {fileID: 0}
@@ -28,20 +29,20 @@ MonoBehaviour:
       y: 0
       width: 0
       height: 0
-    lifespan: 3
+    lifespan: 0
     damage: 5
     damageVariance: 2
-    area: 2
+    area: 1
     speed: 1
-    cooldown: 1
-    projectileInterval: 0.1
-    knockback: 1
+    cooldown: 1.3
+    projectileInterval: 0
+    knockback: 0
     number: 1
     piercing: 1
-    maxInstances: 70
+    maxInstances: 50
   linearGrowth:
-  - name: Level 2
-    description: 
+  - name: "Alho N\xEDvel 2"
+    description: "Aumenta \xE1rea em 40%. Dano base aumenta em 2"
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -52,11 +53,77 @@ MonoBehaviour:
       width: 0
       height: 0
     lifespan: 0
-    damage: 10
+    damage: 2
+    damageVariance: 0
+    area: 0.4
+    speed: 0
+    cooldown: 0
+    projectileInterval: 0
+    knockback: 0
+    number: 0
+    piercing: 0
+    maxInstances: 0
+  - name: "Alho N\xEDvel 3"
+    description: Tempo de recarga reduzido em 0,1. Dano base aumenta em 1
+    projectilePrefab: {fileID: 0}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 0}
+    spawnVariance:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    lifespan: 0
+    damage: 1
     damageVariance: 0
     area: 0
     speed: 0
+    cooldown: 0.1
+    projectileInterval: 0
+    knockback: 0
+    number: 0
+    piercing: 0
+    maxInstances: 0
+  - name: "Alho N\xEDvel 3"
+    description: "Aumenta \xE1rea em 20%. Dano base aumenta em 1"
+    projectilePrefab: {fileID: 0}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 0}
+    spawnVariance:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    lifespan: 0
+    damage: 1
+    damageVariance: 0
+    area: 0.28
+    speed: 0
     cooldown: 0
+    projectileInterval: 0
+    knockback: 0
+    number: 0
+    piercing: 0
+    maxInstances: 0
+  - name: "Alho N\xEDvel 4"
+    description: Tempo de recarga reduzido em 0,1. Dano base aumenta em 2
+    projectilePrefab: {fileID: 0}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 0}
+    spawnVariance:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    lifespan: 0
+    damage: 2
+    damageVariance: 0
+    area: 0
+    speed: 0
+    cooldown: 0.1
     projectileInterval: 0
     knockback: 0
     number: 0

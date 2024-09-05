@@ -42,26 +42,27 @@ public class Aura : WeaponEffect
     }
 
     void OnTriggerEnter2D(Collider2D other)
+{
+    if (other.TryGetComponent(out EnemyStats es))
     {
-        if (other.TryGetComponent(out EnemyStats es))
+        Debug.Log("No Hit");
+        // If the target is not yet affected by this aura,
+        // add it to our list of affected targets
+        if (!affectedTargets.ContainsKey(es))
         {
-            // If the target is not yet affected by this aura, add it
-            // to our list of affected targets.
-            if (!affectedTargets.ContainsKey(es))
-            {
-                // Always starts with an interval of 0, so that it will get
-                // damaged in the next Update() tick.
-                affectedTargets.Add(es, 0);
-            }
-            else
-            {
-                if (targetsToUnaffect.Contains(es))
-                {
-                    targetsToUnaffect.Remove(es);
-                }
-            }
+            Weapon.Stats stats = weapon.GetStats();
+            es.TakeDamage(GetDamage(), transform.position, stats.knockback);
+            Debug.Log("Hit! Number of affected targets: " + affectedTargets.Count);
+            // Always starts with an interval of 0,
+            // so that'll get damaged in the next Update() tick
+            affectedTargets.Add(es, 0);
+        } else
+        {
+            Debug.Log("Refresh hit list");
+            if (targetsToUnaffect.Contains(es)) targetsToUnaffect.Remove(es);
         }
     }
+}
 
     void OnTriggerExit2D(Collider2D other)
     {
