@@ -18,7 +18,7 @@ MonoBehaviour:
   - name: Soul Eater
     condition: 1
     consumes: 2
-    evolutionLevel: 5
+    evolutionLevel: 2
     catalysts:
     - itemType: {fileID: 11400000, guid: 8edb9fe8193b473419c5ed96b5ebf3ce, type: 2}
       level: 5
@@ -39,7 +39,7 @@ MonoBehaviour:
       width: 0
       height: 0
     lifespan: 3
-    damage: 6.5
+    damage: 5
     damageVariance: 2
     area: 1
     speed: 10
@@ -50,7 +50,7 @@ MonoBehaviour:
     piercing: 1
     maxInstances: 70
   linearGrowth:
-  - name: "N\xEDvel 2"
+  - name: "Faca n\xEDvel 2"
     description: "Atira mais 1 proj\xE9til"
     projectilePrefab: {fileID: 4396335964037200229, guid: 7a23b96f550fa7c4593992723ab23eec, type: 3}
     auraPrefab: {fileID: 0}

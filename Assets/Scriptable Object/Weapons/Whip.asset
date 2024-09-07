@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fae704dd6049ce4cb2da58c0df7533a, type: 3}
+  m_Name: Whip
+  m_EditorClassIdentifier: 
+  icon: {fileID: 1287584469, guid: 5be8b08451d94db4e8190c4b8b116416, type: 3}
+  maxLevel: 2
+  evolutionData: []
+  behaviour: WhipWeapon
+  baseStats:
+    name: Chicote
+    description: Ataque horizontal e passa por dentro dos inimigos.
+    projectilePrefab: {fileID: 6441320179007334494, guid: 4dc1f879ef6d04b49b37f796a9d83290, type: 3}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 0}
+    spawnVariance:
+      serializedVersion: 2
+      x: 2.5
+      y: 0
+      width: 0
+      height: 0
+    lifespan: 0.21
+    damage: 5
+    damageVariance: 2
+    area: 1
+    speed: 0
+    cooldown: 1.35
+    projectileInterval: 0.1
+    knockback: 0.5
+    number: 1
+    piercing: 1
+    maxInstances: 4
+  linearGrowth:
+  - name: "Chicote n\xEDvel 2"
+    description: "Adiciona mais 1 proj\xE9til"
+    projectilePrefab: {fileID: 6441320179007334494, guid: 4dc1f879ef6d04b49b37f796a9d83290, type: 3}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 0}
+    spawnVariance:
+      serializedVersion: 2
+      x: 2.5
+      y: 0
+      width: 0
+      height: 0
+    lifespan: 0
+    damage: 0
+    damageVariance: 0
+    area: 0
+    speed: 0
+    cooldown: 0
+    projectileInterval: 0
+    knockback: 0
+    number: 1
+    piercing: 0
+    maxInstances: 0
+  randomGrowth: []

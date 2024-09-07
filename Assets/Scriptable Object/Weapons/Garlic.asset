@@ -41,7 +41,7 @@ MonoBehaviour:
     piercing: 1
     maxInstances: 50
   linearGrowth:
-  - name: "Alho N\xEDvel 2"
+  - name: "Alho n\xEDvel 2"
     description: "Aumenta \xE1rea em 40%. Dano base aumenta em 2"
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}

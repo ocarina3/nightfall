@@ -16,9 +16,9 @@ MonoBehaviour:
   name: Gennaro
   startingWeapon: {fileID: 11400000, guid: 46add6bf12bf7d548ab9a66a452e0014, type: 2}
   stats:
-    maxHealth: 1000
+    maxHealth: 800
     recovery: 0
-    moveSpeed: 5
+    moveSpeed: 6
     might: 1
     speed: 1
-    magnet: 30
+    magnet: 1

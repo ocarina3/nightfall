@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f94bb965ad57d543b0f10c91c116c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 5
 --- !u!61 &1736512346667844785
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -160,4 +160,4 @@ MonoBehaviour:
   drops:
   - name: Red Potion
     itemPrefab: {fileID: 743148417052712556, guid: 0a985ebdd7c8f0747813f04309b0f5d4, type: 3}
-    dropRate: 100
+    dropRate: 30

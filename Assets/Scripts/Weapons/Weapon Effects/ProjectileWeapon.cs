@@ -69,7 +69,16 @@ public class ProjectileWeapon : Weapon
     // Gets which direction the projectile should face when spawning.
     protected virtual float GetSpawnAngle()
     {
-        return Mathf.Atan2(movement.lastMovedVector.y, movement.lastMovedVector.x) * Mathf.Rad2Deg;
+        // Get the mouse position in the world
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    
+        // Calculate the direction from the player to the mouse
+        Vector2 direction = mousePosition - transform.position;
+        
+        // Calculate the angle in degrees using Atan2
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        return angle;
     }
 
     // Generates a random point to spawn the projectile on, and

@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fae704dd6049ce4cb2da58c0df7533a, type: 3}
+  m_Name: Lightning Ring
+  m_EditorClassIdentifier: 
+  icon: {fileID: 197960081, guid: 9d0d19eef909a5b438c2a32c0cb60872, type: 3}
+  maxLevel: 0
+  evolutionData: []
+  behaviour: LightningRingWeapon
+  baseStats:
+    name: "Choque el\xE9trico"
+    description: "Acerta inimigos aleat\xF3rios"
+    projectilePrefab: {fileID: 0}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 1554025056871992909, guid: c0bda8df1b6e7f842b95a419d88f4db3, type: 3}
+    spawnVariance:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    lifespan: 0
+    damage: 10
+    damageVariance: 2
+    area: 1
+    speed: 0
+    cooldown: 4.5
+    projectileInterval: 0.05
+    knockback: 1
+    number: 2
+    piercing: 0
+    maxInstances: 50
+  linearGrowth:
+  - name: "Choque el\xE9trico n\xEDvel 2"
+    description: Acerta mais inimigos
+    projectilePrefab: {fileID: 0}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 1554025056871992909, guid: c0bda8df1b6e7f842b95a419d88f4db3, type: 3}
+    spawnVariance:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    lifespan: 0
+    damage: 0
+    damageVariance: 0
+    area: 0
+    speed: 0
+    cooldown: 0
+    projectileInterval: 0
+    knockback: 0
+    number: 2
+    piercing: 0
+    maxInstances: 0
+  randomGrowth: []

@@ -1,11 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// An aura is a damage-over-time effect that applies to a specific area in timed intervals.
-/// It is used to give the functionality of Garlic, and it can also be used to spawn holy
-/// water effects as well.
-/// </summary>
 public class Aura : WeaponEffect
 {
 
