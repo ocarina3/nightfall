@@ -10285,7 +10285,7 @@ MonoBehaviour:
     waveQuota: 0
     enemyGroups:
     - enemyName: bat
-      enemyCount: 20
+      enemyCount: 25
       spawnCount: 0
       enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
     spawnInterval: 1
@@ -10294,42 +10294,29 @@ MonoBehaviour:
     waveQuota: 0
     enemyGroups:
     - enemyName: red bat
-      enemyCount: 2
+      enemyCount: 10
       spawnCount: 0
       enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
     - enemyName: big flower
       enemyCount: 2
-      spawnCount: 0
+      spawnCount: 15
       enemyPrefab: {fileID: 5187780107763065688, guid: fdbaa755ffa7dfd468ef115b9581dcf0, type: 3}
-    spawnInterval: 3
+    spawnInterval: 1
     spawnCount: 0
   - waveName: wave 3
     waveQuota: 0
     enemyGroups:
     - enemyName: bat
-      enemyCount: 40
-      spawnCount: 0
+      enemyCount: 50
+      spawnCount: 5
       enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
     - enemyName: red bat
-      enemyCount: 3
-      spawnCount: 0
-      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
-    spawnInterval: 1
-    spawnCount: 0
-  - waveName: wave 4
-    waveQuota: 0
-    enemyGroups:
-    - enemyName: bat
-      enemyCount: 1
-      spawnCount: 0
-      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
-    - enemyName: red bat
-      enemyCount: 2
+      enemyCount: 25
       spawnCount: 0
       enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
     - enemyName: skeleton
-      enemyCount: 1
-      spawnCount: 0
+      enemyCount: 10
+      spawnCount: 20
       enemyPrefab: {fileID: 453610899953634020, guid: ad84b785a6f85534a8f70dda99ac4d46, type: 3}
     - enemyName: zombie
       enemyCount: 5
@@ -10339,6 +10326,15 @@ MonoBehaviour:
       enemyCount: 5
       spawnCount: 0
       enemyPrefab: {fileID: 5187780107763065688, guid: 7a031f7205220b542a40d19949a49c3f, type: 3}
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Boss
+    waveQuota: 0
+    enemyGroups:
+    - enemyName: Boss
+      enemyCount: 1
+      spawnCount: 0
+      enemyPrefab: {fileID: 453610899953634020, guid: ef85b011101140a4194a6a93288be5d3, type: 3}
     spawnInterval: 1
     spawnCount: 0
   currentWaveCount: 0
