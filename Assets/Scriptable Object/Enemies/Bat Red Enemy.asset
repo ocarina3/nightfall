@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Bat Red Enemy
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  maxHealth: 100
+  maxHealth: 90
   damage: 50

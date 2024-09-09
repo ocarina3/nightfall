@@ -10281,57 +10281,192 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - waveName: wave 1
-    waveQuota: 0
+  - waveName: bats
+    waveQuota: 1
     enemyGroups:
     - enemyName: bat
-      enemyCount: 25
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    - enemyName: bat
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    - enemyName: bat
+      enemyCount: 10
       spawnCount: 0
       enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
     spawnInterval: 1
     spawnCount: 0
-  - waveName: wave 2
-    waveQuota: 0
+  - waveName: red bats
+    waveQuota: 1
     enemyGroups:
     - enemyName: red bat
-      enemyCount: 10
+      enemyCount: 1
       spawnCount: 0
       enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
-    - enemyName: big flower
+    - enemyName: red bat
+      enemyCount: 1
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
+    - enemyName: red bat
+      enemyCount: 1
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
+    - enemyName: red bat
+      enemyCount: 1
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: zombies, skeletons
+    waveQuota: 1
+    enemyGroups:
+    - enemyName: zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 1449131127727751449, guid: 5b5ef57173a19974bb012b8c94ba950f, type: 3}
+    - enemyName: zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 1449131127727751449, guid: 5b5ef57173a19974bb012b8c94ba950f, type: 3}
+    - enemyName: skeleton
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 453610899953634020, guid: ad84b785a6f85534a8f70dda99ac4d46, type: 3}
+    - enemyName: skeleton
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 453610899953634020, guid: ad84b785a6f85534a8f70dda99ac4d46, type: 3}
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: a lot bats
+    waveQuota: 1
+    enemyGroups:
+    - enemyName: bat
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    - enemyName: bat
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    - enemyName: bat
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    - enemyName: bat
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    - enemyName: bat
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    - enemyName: bat
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    - enemyName: bat
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    - enemyName: bat
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    - enemyName: bat
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    - enemyName: bat
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    - enemyName: bat
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    - enemyName: bat
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    - enemyName: bat
+      enemyCount: 10
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: a lot of red bats
+    waveQuota: 1
+    enemyGroups:
+    - enemyName: red bat
       enemyCount: 2
-      spawnCount: 15
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
+    - enemyName: red bat
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
+    - enemyName: red bat
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
+    - enemyName: red bat
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
+    - enemyName: red bat
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
+    - enemyName: red bat
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
+    - enemyName: red bat
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
+    - enemyName: red bat
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
+    - enemyName: red bat
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
+    - enemyName: red bat
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: flowers
+    waveQuota: 1
+    enemyGroups:
+    - enemyName: flower
+      enemyCount: 4
+      spawnCount: 0
+      enemyPrefab: {fileID: 5187780107763065688, guid: 7a031f7205220b542a40d19949a49c3f, type: 3}
+    - enemyName: flower
+      enemyCount: 4
+      spawnCount: 0
+      enemyPrefab: {fileID: 5187780107763065688, guid: 7a031f7205220b542a40d19949a49c3f, type: 3}
+    - enemyName: red flowers
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 5187780107763065688, guid: fdbaa755ffa7dfd468ef115b9581dcf0, type: 3}
+    - enemyName: red flowers
+      enemyCount: 2
+      spawnCount: 0
       enemyPrefab: {fileID: 5187780107763065688, guid: fdbaa755ffa7dfd468ef115b9581dcf0, type: 3}
     spawnInterval: 1
     spawnCount: 0
-  - waveName: wave 3
-    waveQuota: 0
+  - waveName: boss
+    waveQuota: 1
     enemyGroups:
-    - enemyName: bat
-      enemyCount: 50
-      spawnCount: 5
-      enemyPrefab: {fileID: 6277894523927684488, guid: daf5ab3380ff58d4a9abf2413c36b89e, type: 3}
-    - enemyName: red bat
-      enemyCount: 25
-      spawnCount: 0
-      enemyPrefab: {fileID: 6277894523927684488, guid: 1a3236d2107d8b5459b784531e3a0812, type: 3}
-    - enemyName: skeleton
-      enemyCount: 10
-      spawnCount: 20
-      enemyPrefab: {fileID: 453610899953634020, guid: ad84b785a6f85534a8f70dda99ac4d46, type: 3}
-    - enemyName: zombie
-      enemyCount: 5
-      spawnCount: 0
-      enemyPrefab: {fileID: 1449131127727751449, guid: 5b5ef57173a19974bb012b8c94ba950f, type: 3}
-    - enemyName: flower
-      enemyCount: 5
-      spawnCount: 0
-      enemyPrefab: {fileID: 5187780107763065688, guid: 7a031f7205220b542a40d19949a49c3f, type: 3}
-    spawnInterval: 1
-    spawnCount: 0
-  - waveName: Boss
-    waveQuota: 0
-    enemyGroups:
-    - enemyName: Boss
+    - enemyName: boss
       enemyCount: 1
       spawnCount: 0
       enemyPrefab: {fileID: 453610899953634020, guid: ef85b011101140a4194a6a93288be5d3, type: 3}
@@ -10341,7 +10476,7 @@ MonoBehaviour:
   enemiesAlive: 0
   maxEnemiesAllowed: 9999
   maxEnemiesReached: 0
-  waveInterval: 10
+  waveInterval: 15
   relativeSpawnPoints:
   - {fileID: 1216604057}
   - {fileID: 1142320714}
