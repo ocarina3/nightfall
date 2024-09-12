@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 852513975, guid: 9d0d19eef909a5b438c2a32c0cb60872, type: 3}
   maxLevel: 5
+  evolutionData: []
   baseStats:
     name: Pummarola
-    description: Gives some regen.
+    description: O personagem recupera 0,2 HP por segundo
     boosts:
       maxHealth: 0
       recovery: 0.2
@@ -26,7 +27,7 @@ MonoBehaviour:
       magnet: 0
   growth:
   - name: Level 2
-    description: Gives some regen.
+    description: "A recupera\xE7\xE3o de sa\xFAde aumenta em 0,2 HP por segundo. "
     boosts:
       maxHealth: 0
       recovery: 0.2
@@ -35,7 +36,7 @@ MonoBehaviour:
       speed: 0
       magnet: 0
   - name: Level 3
-    description: Gives some regen.
+    description: "A recupera\xE7\xE3o de sa\xFAde aumenta em 0,2 HP por segundo. "
     boosts:
       maxHealth: 0
       recovery: 0.2
@@ -44,7 +45,7 @@ MonoBehaviour:
       speed: 0
       magnet: 0
   - name: Level 4
-    description: Gives some regen.
+    description: "A recupera\xE7\xE3o de sa\xFAde aumenta em 0,2 HP por segundo. "
     boosts:
       maxHealth: 0
       recovery: 0.2
@@ -53,7 +54,7 @@ MonoBehaviour:
       speed: 0
       magnet: 0
   - name: Level 5
-    description: Gives some regen.
+    description: "A recupera\xE7\xE3o de sa\xFAde aumenta em 0,2 HP por segundo. "
     boosts:
       maxHealth: 0
       recovery: 0.2

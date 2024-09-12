@@ -28,7 +28,8 @@ MonoBehaviour:
   behaviour: ProjectileWeapon
   baseStats:
     name: Faca
-    description: "Atira na dire\xE7\xE3o onde o jogador se move"
+    description: "A faca atira facas na dire\xE7\xE3o em que o jogador est\xE1 apontando
+      com o seu mouse."
     projectilePrefab: {fileID: 4396335964037200229, guid: 7a23b96f550fa7c4593992723ab23eec, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -51,7 +52,7 @@ MonoBehaviour:
     maxInstances: 70
   linearGrowth:
   - name: "Faca n\xEDvel 2"
-    description: "Atira mais 1 proj\xE9til"
+    description: "Dispara mais 1 proj\xE9til. "
     projectilePrefab: {fileID: 4396335964037200229, guid: 7a23b96f550fa7c4593992723ab23eec, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -73,7 +74,7 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: "N\xEDvel 3"
-    description: "Atira mais 1 proj\xE9til. Dano base aumenta em 5."
+    description: "Dispara mais 1 proj\xE9til. Dano base aumentado em 5. "
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -95,7 +96,7 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: "N\xEDvel 4"
-    description: "Atira mais 1 proj\xE9til"
+    description: "Dispara mais 1 proj\xE9til."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -117,7 +118,7 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: "N\xEDvel 5"
-    description: Aumenta dano base em 5
+    description: 'Passa por mais 1 inimigo. '
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}

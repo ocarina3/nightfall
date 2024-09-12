@@ -18,7 +18,8 @@ MonoBehaviour:
   behaviour: AxeWeapon
   baseStats:
     name: Machado
-    description: "\xC9 jogado para cima e d\xE1 bastante dano"
+    description: "Machados s\xE3o lan\xE7ados acima do jogador, caindo em arco e
+      causando dano."
     projectilePrefab: {fileID: 3272119751330959980, guid: cfdf491c940348249b24f10b50c79ca6, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -41,7 +42,7 @@ MonoBehaviour:
     maxInstances: 99
   linearGrowth:
   - name: "Machado n\xEDvel 2"
-    description: Dano aumenta em 5
+    description: "Dispara mais 1 proj\xE9til."
     projectilePrefab: {fileID: 3272119751330959980, guid: cfdf491c940348249b24f10b50c79ca6, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}

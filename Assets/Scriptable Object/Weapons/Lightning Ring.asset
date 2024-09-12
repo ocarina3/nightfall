@@ -18,7 +18,8 @@ MonoBehaviour:
   behaviour: LightningRingWeapon
   baseStats:
     name: "Choque el\xE9trico"
-    description: "Acerta inimigos aleat\xF3rios"
+    description: "Raios atingem o ch\xE3o, criando hitboxes que causam dano a inimigos
+      aleat\xF3rios."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 1554025056871992909, guid: c0bda8df1b6e7f842b95a419d88f4db3, type: 3}
@@ -41,7 +42,7 @@ MonoBehaviour:
     maxInstances: 50
   linearGrowth:
   - name: "Choque el\xE9trico n\xEDvel 2"
-    description: Acerta mais inimigos
+    description: "Dispara mais 1 proj\xE9til. "
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 1554025056871992909, guid: c0bda8df1b6e7f842b95a419d88f4db3, type: 3}

@@ -18,8 +18,8 @@ MonoBehaviour:
   behaviour: AuraWeapon
   baseStats:
     name: Alho
-    description: "Cria uma aura delimitada por 3 c\xEDrculos e d\xE1 dano em todos
-      dentro"
+    description: "Tr\xEAs c\xEDrculos conc\xEAntricos girat\xF3rios envolvem o jogador,
+      causando dano."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: -5671752530922812645, guid: d7805ae8d749419489d602dd9d36f95a, type: 3}
     hitEffect: {fileID: 0}
@@ -42,7 +42,7 @@ MonoBehaviour:
     maxInstances: 50
   linearGrowth:
   - name: "Alho n\xEDvel 2"
-    description: "Aumenta \xE1rea em 40%. Dano base aumenta em 2"
+    description: "\xC1rea base aumentada em 40%. Dano base aumentado em 2."
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -64,7 +64,8 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: "Alho N\xEDvel 3"
-    description: Tempo de recarga reduzido em 0,1. Dano base aumenta em 1
+    description: Tempo de recarga reduzido em 0,1 segundos. Dano base aumentado em
+      1.
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -86,7 +87,7 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: "Alho N\xEDvel 3"
-    description: "Aumenta \xE1rea em 20%. Dano base aumenta em 1"
+    description: "\xC1rea base aumentada em 20%. Dano base aumentado em 1. "
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -108,7 +109,8 @@ MonoBehaviour:
     piercing: 0
     maxInstances: 0
   - name: "Alho N\xEDvel 4"
-    description: Tempo de recarga reduzido em 0,1. Dano base aumenta em 2
+    description: 'Tempo de recarga reduzido em 0,1 segundos. Dano base aumentado
+      em 2. '
     projectilePrefab: {fileID: 0}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}

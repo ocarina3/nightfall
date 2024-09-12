@@ -26,8 +26,8 @@ MonoBehaviour:
       itemType: {fileID: 11400000, guid: 5532d53957a30e147966c9092ffc6c85, type: 2}
       level: 1
   baseStats:
-    name: Spinach
-    description: Makes you like popeye
+    name: Espinafre
+    description: Aumenta o dano causado em 10%
     boosts:
       maxHealth: 0
       recovery: 0
@@ -37,7 +37,7 @@ MonoBehaviour:
       magnet: 0
   growth:
   - name: Level 2
-    description: Makes you more like popeye
+    description: 'Dano base aumentado em 10% '
     boosts:
       maxHealth: 0
       recovery: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
       speed: 0
       magnet: 0
   - name: Level 3
-    description: Makes you more like popeye
+    description: 'Dano base aumentado em 10% '
     boosts:
       maxHealth: 0
       recovery: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
       speed: 0
       magnet: 0
   - name: Level 4
-    description: Makes you more like popeye
+    description: 'Dano base aumentado em 10% '
     boosts:
       maxHealth: 0
       recovery: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
       speed: 0
       magnet: 0
   - name: Level 5
-    description: Makes you more like popeye
+    description: 'Dano base aumentado em 10% '
     boosts:
       maxHealth: 0
       recovery: 0

@@ -18,7 +18,8 @@ MonoBehaviour:
   behaviour: WhipWeapon
   baseStats:
     name: Chicote
-    description: Ataque horizontal e passa por dentro dos inimigos.
+    description: Um corte horizontal parte do tronco do personagem, danificando inimigos
+      na frente.
     projectilePrefab: {fileID: 6441320179007334494, guid: 4dc1f879ef6d04b49b37f796a9d83290, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
@@ -41,7 +42,7 @@ MonoBehaviour:
     maxInstances: 4
   linearGrowth:
   - name: "Chicote n\xEDvel 2"
-    description: "Adiciona mais 1 proj\xE9til"
+    description: '"Ataca horizontalmente, atravessa os inimigos." '
     projectilePrefab: {fileID: 6441320179007334494, guid: 4dc1f879ef6d04b49b37f796a9d83290, type: 3}
     auraPrefab: {fileID: 0}
     hitEffect: {fileID: 0}
